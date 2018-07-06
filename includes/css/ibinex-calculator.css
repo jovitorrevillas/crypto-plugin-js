@@ -1,0 +1,63 @@
+/* Style 2 */
+
+.style-2 .ibx-dropdown {
+	position: relative;
+	background: #f7931a;
+}
+
+.style-2 .ibx-dropdown__button:hover {
+	color: #fff;
+}
+
+.style-2 .ibx-dropdown__button {
+	color: #fff !important;
+	box-shadow: none !important;
+}
+
+.style-2 .ibx-dropdown__list-item {
+    color: #f7931a !important;
+    margin-left: 0 !important;
+}
+
+.style-2 .ibx-dropdown__list-item:hover {
+    color: #000 !important;
+}
+
+.style-2 .ibx-calc__control-text {
+    color: #000 !important;
+    padding: 19px 8px !important;
+    border: 1px solid goldenrod !important;
+}
+
+/* Style 3 */
+
+.style-3 .ibx-dropdown {
+    position: relative;
+    box-shadow: 0px 2px 2px #7e7e7e;
+}
+
+.style-3 .ibx-dropdown__button:hover {
+    color: #fff;
+}
+
+.style-3 .ibx-dropdown__button {
+    background: linear-gradient(to bottom right, #ab1a23, #ab1a23) !important;
+}
+
+.style-3 .ibx-dropdown__list {
+    background: #2a2a2a !important;
+}
+
+.style-3 .ibx-dropdown__list-item {
+    color: #f7931a !important;
+    margin-left: 0 !important;
+}
+
+.style-3 .ibx-dropdown__list-item:hover {
+    color: #000 !important;
+}
+
+.style-3 .ibx-calc__control-text {
+    background: #2a2a2a !important;
+    box-shadow: 0px 2px 2px #7e7e7e;
+}
