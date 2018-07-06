@@ -15,7 +15,6 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('bootsrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', false, null);
     wp_enqueue_style('ibinex-crypto-list-css', plugin_dir_url(__FILE__) .'css/list-style.css', false, null);
     wp_enqueue_style('ibinex-crypto-list-roboto', 'https://fonts.googleapis.com/css?family=Roboto', false, null);
-
 });
 
 
