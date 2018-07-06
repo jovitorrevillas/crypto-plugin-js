@@ -1,0 +1,28 @@
+.crypto-display-container {
+    padding: 1.5rem;
+}
+.crypto-column {
+	display: inline-flex;
+}
+.crypto-row {
+	margin-bottom: 0.5rem;
+	border-bottom: 1px solid #C0C1B3;
+	padding-bottom: 0.5rem;
+}
+.crypto-row:last-child {
+	border-bottom: 0;
+}
+.cs {
+	font-size: 1.3em;
+	font-weight: 700;
+	color: #555555;
+	font-family: 'Roboto', sans-serif;
+}
+span {
+	font-weight: 600;
+	font-family: 'Roboto', sans-serif;
+}
+.cp {
+	font-weight: 600;
+	font-family: 'Roboto', sans-serif;
+}
