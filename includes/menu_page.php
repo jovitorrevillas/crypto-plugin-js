@@ -41,7 +41,63 @@ function admin_menu() {
 		'100'	//Position
 	);
 
+	add_filter( 'manage_edit-crypto-calculator_columns', 'my_edit_crypto_calculator_columns' ) ;
+	add_filter( 'aa', 'my_edit_crypto_calculator_theme' );
+
+	function my_edit_crypto_calculator_columns( $columns ) {    $columns = array(
+
+	        'cb' => '<input type="checkbox" />',
+
+	        'title' => __( 'Title' ),
+
+	        'shortcode' => __( 'Shortcode' ),
+
+	        'currency' => __( 'Currencies' ),
+
+	        'date' => __( 'Date' )
+
+	    );  return $columns;
+
+	}
+
+	function my_edit_crypto_calculator_theme( $style ) {    
+		$style = array(
+			'cb' => '<input type="radio" />',
+			'title' => __( 'Title' ),
+			'shortcode' => __( 'Shortcode' ),
+			'currency' => __( 'Currencies' ),
+			'date' => __( 'Date' )
+		);  return $style;
+
+	}
+
+
+	add_action( 'manage_crypto-calculator_posts_custom_column', 'my_manage_crypto_calculator_columns', 10, 2 );
+
+	function my_manage_crypto_calculator_columns( $column, $post_id ) {
+		global $post;
+		switch( $column ) {
+			case 'shortcode' :
+				$shortcode = get_post_custom( $post->specifiedID );
+				if ( !empty( $shortcode ) )
+					echo __( '[ibx_calc id="'. $post->ID .'"]' );
+				else
+					echo __( 'sample' );
+				break;
+			case 'currency' :
+				$currency = get_post_custom( $post->specifiedID );
+				if ( !empty( $currency ) )
+					echo __( implode( ', ', $currency['crypto_symbols']) );
+				else
+					echo __( 'sample' );
+				break;
+			default :
+				break;
+		}
+	}
 }
+
+
 
 add_filter( 'manage_edit-crypto-display_columns', 'my_edit_crypto_display_columns' ) ;
 function my_edit_crypto_display_columns( $columns ) {

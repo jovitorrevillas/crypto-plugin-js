@@ -23,5 +23,7 @@ if (file_exists($composer = __DIR__.'/vendor/autoload.php')) {
 define( 'IBINEX_CC_PLUGIN', __FILE__ );
 define( 'IBINEX_CC_PLUGIN_DIR', untrailingslashit( dirname( IBINEX_CC_PLUGIN ) ) );
 define( 'IBINEX_CC_PLUGIN_CALL', plugin_dir_url(__FILE__) );
+define( 'SC_IMAGE_DIR', plugin_dir_url(__FILE__) . 'includes/frontend/img' );
+
 
 require_once IBINEX_CC_PLUGIN_DIR . '/settings.php';
